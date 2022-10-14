@@ -28,7 +28,7 @@ consentForm.addEventListener('submit', function(e){
   <div class="modal-inner-loading">
     <img src="images/loading.svg" class="loading">
     <p id="upload-text">Uploading your data to the dark web...</p>
-  </div>` 
+  </div>`
   
   setTimeout(function(){
     document.getElementById('upload-text').innerText = `
@@ -45,4 +45,4 @@ consentForm.addEventListener('submit', function(e){
 `
   modalCloseBtn.disabled = false
   }, 3000)
-}) 
+})
