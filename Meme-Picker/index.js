@@ -1,60 +1,44 @@
-import { catsData } from "./data"
+const series = [
+  {
+      name: 'The Wire',
+      location: 'Baltimore',
+      lengthInHours : 60,
+      genres: ['action', 'thriller', 'detective', 'suspense']
+  },
+  {
+      name: 'Game of Thromes',
+      location: 'Westeros and Essos',
+      lengthInHours : 70.25,
+      genres: ['fantasy', 'action', 'tragedy']
+  },
+  {
+      name: 'Friends',
+      location: 'New York',
+      lengthInHours : 85,
+      genres: ['comedy', 'romance', 'drama']
+  },
+  {
+      name: 'The Walking Dead',
+      location: 'Atlanta',
+      lengthInHours : 131,
+      genres: ['zombie', 'apocalypse', 'thriller', 'suspense']
+  },
+  {
+      name: 'The Big Bang Theory',
+      location: 'Pasadena',
+      lengthInHours : 139.66,
+      genres: ['comedy', 'nerd', 'romance']
+  },
+]
 
-const emotionRadios = document.getElementById('emotion-radios')
-const getImageBtn = document.getElementById('get-image-btn')
-const gifsOnlyOption = document.getElementById('gifs-only-option')
+const newYorkSeries = series.filter(function(show){
+    return show.location === 'New York'
+})
 
-emotionRadios.addEventListener('change', highlightCheckedOption)
-getImageBtn.addEventListener('click', getMatchingCatsArray)
+console.log(newYorkSeries)
 
-function highlightCheckedOption(e) {
-  const radios = document.getElementsByClassName('radio')
-  for (let radio of radios) {
-    radio.classList.remove('highlight')
-  }
-  document.getElementById(e.target.id).parentElement.classList.add('highlight')
-}
+const thrillers = series.filter(function (show) {
+  return show.genres.includes('thriller')
+})
 
-function getMatchingCatsArray() {
-  const isGif = gifsOnlyOption.ariaChecked
-  console.log(isGif)
-  
-  if(document.querySelector('input[type="radio"]:checked')) {
-    const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
-    console.log(selectedEmotion)
-  }
-}
-
-function getEmotionsArray(cats) {
-  const emotionsArray = []
-
-  for (let cat of cats) {
-    for (let emotion of cat.emotionTags) {
-      if (!emotionsArray.includes(emotion)) {
-        emotionsArray.push(emotion)
-      }
-    }
-  }
-  return emotionsArray
-}
-
-function renderEmotionsRadios(cats) {
-  let radioItems = ``
-  const emotions = getEmotionsArray(cats)
-  for (let emotion of emotions) {
-     
-    radioItems += `
-    <div class="radio">
-      <label for="${emotion}">${emotion}</label>
-      <input
-      type="radio"
-      id=${emotion}
-      value=${emotion}
-      name="emotions">
-    </div>
-    `
-  }
-  emotionRadios.innerHTML = radioItems
-}
-
-renderEmotionsRadios(catsData)
+console.log(thrillers)
