@@ -1,0 +1,1 @@
+import { tweetsData } from "./data";
