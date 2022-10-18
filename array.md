@@ -167,3 +167,243 @@ const maxSlidingWindow = (nums, k) => {
   }
   return res;
 }
+
+{String}
+A string is a sequence of characters. Many tips that apply to arrays also apply to strings. Common data structures that looking up for strings:
+Trie/Prefix Tree
+Suffix Tree
+
+Common String algorithms:
+1) Rabin Karp; for effecient searching of substring using a rolling hash
+2) KMP for efficient searching of substring
+
+{Time Complexity }
+Access    - O(1)
+Search -    O(n)
+Insert -  O(n)
+Remove   - O(n)
+
+
+var isAnagram = function(s, t){
+  if(s.length !== t.length)
+  return false;
+  let sFreq =  Array(26).fill(0);
+
+  for (let c of s) {
+    let idx = c.charCodeAt() - 97;
+    sFreq[idx]+=1;
+  }
+
+  for(let c of t){
+    let idx = c.CharCodeAt() - 97;
+    if(!sFreq[idx])
+    return false;
+    sFreq[idx] -= 1;
+  }
+  return true;
+}
+
+let isAnagram = function(s, t){
+  if(s.length !== t.length)
+  return false;
+
+  let sFreq = {};
+  for(let c of s){
+    sFreq[c] = (sFreq[c] || 0) + 1;
+  };
+  for (let c of t){
+    if(sFreq[c]) sFreq[c] -=1;
+    else return false;
+  }
+  return true;
+}
+
+const reverse = (str) => {
+  const toArr = str.split("");
+  const reversed = toArr.reverse();
+  return reversed.join("");
+}
+
+const lowerTrim = (str) => {
+  const trimmed = str.replace(/[^a-z0-9]/gi, '');
+  return trimmed.toLowerCase();
+}
+
+let isPalindrome = function(s){
+  const alphaNum = lowerTrim(s);
+  return alphaNum === reverse(alphaNum);
+};
+
+const alphaNumOnly = (str) => {
+  const alphaNum = str.replace(/[^a-z0-9]/gi, '');
+  return alphaNum.toLowerCase();
+}
+
+let isPalindrome = function(s){
+  let str = alphaNumOnly(s);
+  for (let i =0; j = str.length - 1; i < j; i++, j--){
+    if (str[i] !== str[j]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+
+let lengthoflongestSubstring = function(s){
+  let start = 0;
+  let result = 0;
+  const lastSeen = {};
+  for (let end = 0; end <  s.length; end++){
+    const c = s.charAt(end);
+    if (c in lastSeen){
+      start = Math.max(start, lastSeen[c] + 1);
+    }
+    lastSeen[c] = end;
+    result = Math.max(result, end - start + 1);
+  }
+  return result;
+}
+
+Time Complexity: O(n)
+Space complexity: O(1)
+
+let characterReplacement = function(s, k){
+  let map = [26]
+  let largestCount = 0, beg = 0, maxlen = 0;
+  for (let end = 0; end < s.length; end++){
+    const c = s[end]
+    map[c] = (map[c] || 0) + 1
+    largestCount = Math.max(largestCount, map[c])
+    if(end - beg + 1 - largestCount > k){
+      map[s[beg]] -= 1
+      beg += 1
+    }
+    maxlen = Math.max(maxlen, end - beg + 1)
+  }
+  return maxlen;
+};
+
+const findAnagrams = (s, p) => {
+  const output = [];
+  const neededChars = {};
+
+  for (let char of p){
+    if(char in neededChars){
+      neededChars[chars]++
+    } else neededChars[chars] = 1
+  }
+
+  let left = 0;
+  let right = 0;
+  let count = p.length
+
+  //start sliding the window
+  while (right < s.length){
+    if (neededChars[s[right]] > 0) count--;
+
+    neededChars[s[right]]--;
+    right++;
+
+    if (count === 0) output.push(left);
+    if (right - left == p.length){
+      if (neededChars[s[left]] >= 0) count++;
+
+      neededChars[s[left]]++;
+      left++;
+    }
+  }
+  return output;
+}
+
+var minWindow = function(s, t){
+  const fc={}
+  let start = 0, minLengths= s.length+1, matches=0, substrStart=0;
+
+  for (let i=0; i < t.length; i++){
+    let char=t[i]
+    fc[char]? fc[char]++; fc[char]=1;
+  }
+
+  for (let end = 0; end < s.length; end++){
+    let right= s[end];
+
+    if(right in fc){
+      fc[right]--;
+      if (fc[right] >= 0) matches++;
+    }
+
+    while (matches === t.length){
+      if(minLength > end-start+1){
+        minLength=end-start+1;
+        substrStart= start
+      }
+
+      let left=s[start];
+      start++;
+      if(left in fc){
+        if(fc[left]===0) matches--;
+        fc[left]++;
+      }
+    }
+  }
+  if (minLength > s.length) return '';
+  return s.substring(substrStart, minLength+substrStart)
+};
+
+var groupAnagrams = function(strs){
+  let obj = {}
+  for (let str of strs){
+    let letters = str.split("").sort().join("");
+    obj[letters] ? obj[letters].push(str) : obj[letters] = [str]
+  }
+  return Object.values(obj);
+};
+
+<!-- Time Complexity: O(n*klog(k))
+Space Complexity: O(n) -->
+
+var groupAnagrams = function(strs){
+  let m = new Map();
+  for(let str of strs){
+    let sorted = str.split("").sort().join("");
+    if(m.has(sorted)) m.set(sorted, [...m.get(sorted), str]);
+    else m.set(sorted, [str]);
+  }
+  return Array.from(m.values());
+};
+
+var longestPalindrome = function(string){
+  let longestPalLength = 0;
+  let longestPalLeft = 0;
+  let longestPalRight = 0;
+
+  var getLongestPalindrome = function (leftPosition, rightPosition) {
+    while (
+      leftPosition >= 0 &&
+      rightPosition < string.length &&
+      string[leftPosition] === string[rightPosition]
+    ) {
+      leftPosition--;
+      rightPosition++;
+    }
+
+    if (rightPosition - leftPosition > longestPalLength){
+      longestPalLeft = leftPosition + 1;
+      longestPalRight = rightPosition - 1;
+      longestPalLength = longestPalRight - longestPalLeft + 1;
+    }
+  };
+
+  for (let i=0; i< string.length; i++){
+    getLongestPalindrome(i, i + 1);
+    getLongestPalindrome(i, i);
+
+    if ((string.length - i) * 2 < longestPalLength) {
+      break;
+    }
+  }
+  return string.slice(longestPalLeft, longestPalRight + 1);
+}
+
