@@ -1,24 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="index.css">
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+	 crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-  <header>
-		<h1>Twimba</h1>
-	</header>
-	<main>
-		<div class="tweet-input-area">
-			<img src="images/scrimbalogo.png" class="profile-pic">
-      <textarea placeholder="What's happening?" id="tweet-input"></textarea>
+	<header>
+		<div class="title">
+			<h1>Triassic World</h1>
 		</div>
-		<button id="tweet-btn">Tweet</button>
-		<div class="feed" id="feed"></div>
-	</main>
-	<script src="index.js" type="module"></script>
+		<div class="logo"><img src="dino.png"></div>
+	</header>
+	<section class="gallery-container">
+		
+		<div class="img-container">
+			<img src="dino2.jpeg"
+			 alt="Man in front of dinosaur"
+			 id="image-1">
+			<div class="social-icons-container">
+				<i class="fa-solid fa-heart" data-heart="image-1"></i>
+				<i class="fa-solid fa-share" data-share="image-1"></i>
+			</div>
+		</div>
+	</section>
+
+	<script src="index.pack.js"></script>
 </body>
+
 </html>
