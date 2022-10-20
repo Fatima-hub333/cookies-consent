@@ -407,3 +407,239 @@ var longestPalindrome = function(string){
   return string.slice(longestPalLeft, longestPalRight + 1);
 }
 
+
+{Recursion}
+Recursion is a method of solving a computational problem where the solution depends on solutions to smaller instances of the same pproblem. All recursive functions contains two parts;
+1) A base case (or cases) defined, which defines when the recursion is stopped - otherwise it will go on forever!
+2) Breaking down the problem into smaller subproblems and invoking the recursive call.
+
+One of the most common example of recursion is the 'Fibonacci' sequence.
+Base cases: fib(0) = 0 and fib(1) = 1
+Recurrence relation: fib(i) = fib(i - 1) + fib(i - 2)
+
+def fib(n):
+if n <= 1
+return n
+return fib(n - 1) + fib(n - 2)
+
+Memoization: In some cases, you may be computing the result for previously computed inputs. Let's look at the Fibonanci example again. Fib(5) calls Fib(4) and Fib(3). Time Complexity O(n)
+
+{Generate Parenthesis}
+var generateParenrhesis = function(n){
+  let stack = []
+  let res = []
+  let orginialLength = n
+  const recursive=(n, current) =>{
+    if(n === 0){
+      res.push(current)
+      return
+    }
+
+    if (stack.length && stack[stack.length-1]==="("){
+      stack.pop()
+      recursive(n-1, current + ")")
+      stack.push("(")
+    }
+
+    if (current.split("").filter(item=>item==="(").length < originalLength){
+      stack.push("(")
+
+      recursive(n-1, current+"(")
+      stack.pop("(")
+    }
+  }
+
+  recursive(n*2, "")
+  return res
+}
+
+{Combinations}
+
+var combine = functiona(n, k){
+  const output = []
+
+  const backtracking = (current, startNumber, k) => {
+    if (n - startNumber + 1 < k) return;
+    if (k ===0) return output.push(current);
+
+    for(let i = startNumber; i<= n; i++){
+      const newCurrent = [...current];
+      newCurrent.push(i);
+      backtracking(newCurrent, i + 1, k -1);
+    }
+  };
+
+  backtracking([], 1, k);
+
+  return output;
+}
+
+{Subsets}
+const subsets = nums => {
+  const output = []
+
+  const backtrack = (idx, subset) => {
+    output.push([...subset]);
+
+  for (let i =idx, i< nums.length; i++){
+    subset.push(nums[i]);
+    backtrack(i + 1, subset);
+    subset.pop()
+    }
+  };
+  backtrack(0, []);
+  return output;
+};
+
+"Recurssion means defining a problem in terms of itself". This can be a very powerful tool in writing algorithms. Recursion comes directly from Mathematics, where there are many examples of expressions written in terms of themselves. For example, the Fibonnaci sequence is defined as: F(i) = F(i-1)+F(i-2).
+
+{Letter Combinations of a Phone Number}
+
+let alphabet = {
+  '2': 'abc',
+  '3': 'def',
+  '4': 'ghi',
+  '5': 'jkl',
+  '6': 'mno',
+  '7': 'pqrs',
+  '8':  'tuv',
+  '9':  'wxyz'
+}
+
+function permute(permutations, letters){
+  let result = []
+
+  for(let letter of letters){
+    for(let permutation of permutations){
+      result.push(permutation + letter)
+    }
+  }
+  return result
+}
+
+function letterCombinations(digits){
+  if(digits.length === 0){
+    return[]
+  }
+
+  return digits.split('').reduce((previous, current) => {
+    return permute(previous, alphabet[current])
+  }, [''])
+};
+
+{Subsets II}
+class solution {
+  function subsetWithDup(_nums: [Int]) -> [[Int]] {
+    var ans = Set
+  }
+}
+
+var subsetsWithDup = function(nums){
+  nums.sort();
+  let output = [];
+  backtracking(0, [], nums, output);
+  return output
+};
+
+function backtracking(index, list, nums, output){
+  if(index > nums.length) return
+  console.log("output: ", output);
+  console.log("list: ", list);
+  output.push([...list]);
+  for(let i = index; i < nums.length; i++){
+    if(i > index && nums[i] === nums[i - 1]) continue
+    list.push(nums[i]);
+    backtracking(i+1, list, nums, output);
+    list.pop();
+  }
+  return output;
+}
+
+{Permutations}
+
+const permute = (nums) => {
+  const used = new Set();
+  const path = [];
+  const res = [];
+
+  const dfs = () => {
+    if (path.length === nums.length){
+      res.push([...path]);
+    }
+
+    for(let i = 0; i < nums.length; i++){
+      if(used.has(nums[i])) continue;
+
+      path.push(nums[i]);
+      used.add(nums[i]);
+
+      dfs()
+
+      path.pop();
+      used.delete(nums[i])
+    }
+  }
+
+  dfs();
+  return res;
+}
+
+{Suduko Solver}
+var solveSudoku = function(board){
+  for(let i = 0; i < board.length; i++){
+    for(let j=0; j < board[0].length; j++){
+      if(board[i][j] === '.'){
+        for (let k =1; k <= 9; k++){
+          const num = k.toString()
+          if(isNumValid(i, j, num, board)){
+            board[i][j] = num;
+
+            if(solveSudoku(board) === true){
+              return true
+            } else {
+              board[i][j] = '.'
+            }
+          }
+        }
+        return false
+      }
+    }
+  }
+  return true
+};
+
+function isNumValid(row, col, num, board){
+  for(let i =0; i< 9; i++){
+    if(board[row][i] === num) return false
+
+    if(board[i][col] === num) return false
+
+    const currentMatrixRow = Math.floor(row/3)
+    const currentMatrixCol = Math.floor(col/3)
+
+    const currentRow = 3 * currentMatrixRow + Math.floor(i/3)
+    const currentCol = 3 * currentMatrixCol + i%3
+
+    if(board[currentRow][currentCol] === num) return false
+  }
+  return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
