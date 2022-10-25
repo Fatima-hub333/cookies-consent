@@ -1,0 +1,33 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+.wrap {
+  max-width: 600px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.wrap figure{
+  display: contents;
+}
+
+
+@media (max-width: 420px){
+  .wrap {
+    max-width: 320px;
+    display: block;
+  }
+
+  .wrap p {
+    margin-block-start: -3rem;
+    margin-inline-start: 1rem;
+    padding: 1rem;
+    background: rgba(255 255 255/0.8);
+    position: relative;
+  }
+}
