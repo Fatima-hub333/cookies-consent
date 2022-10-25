@@ -140,3 +140,5 @@ function render(){
 }
 
 render()
+
+// You have a good start to your resume, but there are still several key aspects that are missing. I've left comments in the Google Doc, and i have also included feedback above in the General Feedback section. Please carefully review all of the feedback before submitting.
