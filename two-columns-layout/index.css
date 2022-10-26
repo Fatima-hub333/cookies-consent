@@ -31,3 +31,233 @@ img {
     position: relative;
   }
 }
+
+/* Sorting & Searching */
+/* Sorting is the act of rearranging elements in a sequence in order, either in numerical or lexicographical order, and either ascending or descending. A number of basic algorithms run in O(n2) and should not be used in interviews. In algorithm interviews, you're unlikely to need to implement any of the sorting algorithms from scratch. Instead you would need to sort the input using your language's default sorting function so that you can use binary searches on them. 
+
+On a sorted array of elements, by leveraging on its sorted property, searching can be done on them in faster than O(n) time by using a binary seach. Binary search compares the target value with the middle element of the array, which informs the algorithm whether the target value lies in the left half or the right half, and this comparison proceeds on the remaining half until the target is found or the remaining half is empty.
+
+We've all had to deal with some variation of sorting different items in our own, everyday lives. For example, I moved recently, and even though I think I did a pretty good job of packing all my stuff up, there were a lot of things that were fairly disorganized. I had a bunch of papers and writing in the form of a manuscript that I had tossed into moving box in a hurry.
+
+From a strictly human-friendly perspective, it makes a single dataset a whole lot easier to read. It makes it easier to implement search algorithms in order to find or retrieve an item from the entire dataset.
+
+Sorting is the organizing of a set of a similar items in a collection by some property. There are two important things to note here: 
+- All the elements in the list must be of the same type i.e all items are numbers, decimals, strings.
+
+- We can sort a collection of items in either increasing or decreasing order by any one property, and that property by can really be anything. By size, lexicographical(alphabetical)order, numerical order, data, time -- you name it.
+
+- We can only sort a dataset where the items are homogeneous, or are of the same type. In other words, we couldn't sort a dataset with both words and numbers, because that dataset doesn't have a shared property that we could actually sort by. 
+
+Different Types of Sorting Algorithm: There are different ways to classify a sorting algorithm;
+1) Time Complexity
+2) Space Complexity/Memory usage
+3) Stability
+4) Internal vs external
+5) recursive vs non-recursive
+6) comparison vs non-comparison
+
+1- Time Complexity
+The easiest way to classify an algorithm is by 'time complexity', or by how much relative time it takes to run the algorithm given a different input size.
+(How much time a sorting algorithm takes with respect to its input size)
+
+2. Space Complexity/memory usage
+Different algorithms requires a different amount of space, depending on their space complexity. Another way of thinking about space complexity in the context of sorting algorithms is by answering the questio: How much memory will this algorithm need to run?
+
+-The amount of extra space/memory that a sorting algorithm needs to sort its input.
+-in-place algorithm: operates directly on the input dataset and changes it. The original input is effectively destroyed when it is modified by the algorithm. In-place algorithms sometimes create extra variables that also need space!Genrally, it only needs a small, constant amount of extra space: O(1).
+
+-out-of-place algorithm: copies the inputted dataset, and makes any sorting changes on the copied version.
+
+3- Stability: Oftentimes, a single dataset will have more than one element that has the same 'sort key', in other words, multiple items in a list could be considered equal in the way that they could be sorted.
+
+Stable sorting algorithms preserve the relative order of elements when faced with an equal key (on the property by which the dataset is being sorted).
+
+- Stable sorting algorithm: the output is guaranteed to preserve the original order of two elements that are the same in value in which they're being sorted by.
+- Unstable: if two items are found to have the same key value that they're being sorted by, there's no guarantee the elements will be in the same order as before.
+
+4. Internal vs External: Because our machines can sort through large datasets fairly easily, it's common to have some applications that have to sort through huge collections of data. I some cases, this can actually amount to more data than can be maintained in the machine's main memory.
+
+If all the items that need to be sorted are in main memory, the algorithm is an internal sort.
+If the records to be sorted cannot be stored in main memory and the sorted data occurs outside of main memory, such as on a disk or a tape, the algorithm us an external sort.
+
+5. Recursive or non-recursive: Some algorithms do their sorting by dividing and conquering: that is to say, the split up a large dataset into smaller inputs, and then recursively call a sort function upon all of those smaller inputs. This is referred to as a 'recursive sorting algorithm'.
+
+- A recursive sorting algorithm splits the large data input into smaller inputs, recursively sorts those, and then combines the result to produce one large sorted collection.
+
+- Non-recursive algorithms don't recursively call upon themselves (don't sort a small subset using the same sort function on the larger input dataset.)
+
+It's worth mentioning that most algorithms don't have to be implemented recursively, they can be written and implemented iteratively. But whether or not a sorting algorithm is recursive or not ends up being an easy way of classifying one set of algorithms from another.
+
+6. Comparison Sort: Finally, it's possible to classify a sorting algorithm based on how it actually does the job of sorting elements.
+
+Any sorting algorithm that uses only a comparison between two pairs of items to sort a larger dataset.[a comperator defines the ordering, and is used to compare any two items at a time(numerical, alphabetical)]
+
+Sorting algorithms that do not use any type of comparators to do their sorting are reffered to as 'non-comparison sorts'
+
+Sorted data powers almost everything.
+
+
+Bubble sort O(n2) O(1)
+Insertion Sort O(n2) O(1)
+Selection sort O(n2) O(1)
+QuickSort  O(nlog(n)) O(log(n))
+Mergesort O(nlog(n)) O(n)
+Heapsort O(nlog(n)) O(1)
+Counting Sort O(n + k) O(k)
+Redix Sort O(nk)    O(n +k)
+*/
+
+
+
+/* var search = function(nums, target) {
+  let lo = 0, hi = nums.length-1;
+  while (lo < hi) {
+    let mid = lo + Math.floor((hi-lo+1)/2);
+    if(target < nums[mid]) {
+      hi = mid -1
+    } else {
+      lo = mid;
+    }
+  }
+  return nums[lo]==target?lo:-1;
+};
+
+- we define two variables, let's call them (lo) & (hi). They will store array indexes and they work like a boundary such that we will only be looking at elements inside the boundary.
+- The (mid) variable indicates the middle element within the boundary It seperates our boundary in two parts. 
+
+
+var search = function(nums, target) {
+  let back = [...nums].splice(0, nums.indexOf(target));
+  let front = [...nums].splice(nums.indexOf(target), nums.length)
+  return [...front, ...back].length === nums.length ? nums.indexOf(target) : -1
+};
+
+var kthSmallest = function(matrix, k){
+  return matrix.flat().sort((a, b) => a - b) [k -1]
+};
+
+var searchMatrix = function(matrix, target){
+  let m = matrix[0].length;
+  let n = matrix.length;
+
+  let i = 0;
+  let j = m-1;
+
+  while(i < n && j >= 0) {
+    if(matrix[i][j] == target){
+      return true;
+    }
+    if(matrix[i][j] > target){
+      j--;
+    } else {
+      i++;
+    }
+  }
+  return false;
+};
+
+var findKthLargest = function(nums, k){
+  const finalIdx = nums.length - k;
+  let left = 0;
+  let right = nums.length-1;
+
+  while(left <= right){
+    const pivot = Math.floor(Math.random() * (right - left + 1)) + left;
+    const pivotIdx = pivotHelper(pivot, left, right);
+    if(pivotIdx === finalIdx) return nums[finalIdx];
+
+    if(pivotIdx < finalidx) left = pivotIdx + 1;
+    else right = pivotIdx -1;
+  }
+
+  function pivotHelper(pivot, start, end){
+    swap(pivot, end)
+
+    let i = start;
+    let j = start;
+
+    while(j < end){
+      if(nums[j] <= nums[end]){
+        swap(i, j);
+        i++;
+      }
+      j++;
+    }
+
+    swap(i, end);
+    return i;
+  }
+
+  function swap(i, j){
+    [nums[i], nums[j], nums[i]];
+  }
+};
+
+var findKthLargest = function(nums, k){
+  let left = 0;
+  let right = nums.length -1;
+
+  while(true){
+    let pos = position(nums, left, right);
+
+    if(pos === k -1)return nums[pos];
+    else if(pos > k -1) right = pos -1;
+    else left = pos + 1;
+  }
+
+  function position(nums, left, right){
+    let pivot = nums[left];
+    let 1 = left + 1;
+    let r = right;
+
+    while(1 <= r){
+      if (nums[1] < pivot && nums[r] > pivot){
+        swap(nums, 1++, r--);
+      }
+      if (nums[1] >= pivot) 1++;
+      if(nums[r] <= pivot) r--;
+    }
+    swap(nums, left, r);
+    return r;
+  }
+
+  function swap(nums, 1, r){
+    [nums[1], nums[r]] = [nums[r], nums[1]]
+  }
+}
+
+var findMin = function(nums){
+  return Math.min(...nums)
+};
+
+var findMedianSortedArrays = function(nums1, nums2){
+  let mergedArray = [];
+  let left = 0, right= 0, counter = 0;
+
+  while(nums1.length > left && nums2.length > right){
+    if(nums1[left] > nums2[right]){
+      mergedArray.push(nums2[right]);
+      right++;
+    }else if(nums1[left] <= nums2[right]) {
+      mergedArray.push(nums1[left]);
+      left++;
+    }
+  }
+
+  for(let i = left; i<nums1.length; i++){
+    mergedArray.push(nums1[i]);
+  }
+
+  for(let j=right; j <nums2.length; j++){
+    mergedArray.push(nums2[j])
+  }
+
+  if(mergedArray.length % 2 !==0){
+    let index = Math.floor(mergedArray.length / 2);
+    return mergedArray[index];
+  } else {
+    let index = Math.floor((mergedArray.length -1) / 2);
+    return (mergedArray[index] + mergedArray[index+1]) /2;
+  }
+};
+*/
