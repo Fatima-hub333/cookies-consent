@@ -14,3 +14,100 @@
   <script src="index.js"></script>
 </body>
 </html>
+
+<!-- 
+  var setZeroes = function(matrix){
+  const rowSet = new Set(), colSet = new Set()
+  for (let i =0; i < matrix.length; i++){
+    for (let j = 0; j < matrix[i].length; j++){
+      if(!matrix[i][j]){
+        rowSet.add(i);
+        colSet.add(j);
+      };
+    }
+  }
+  for (let i =0; i < matrix.length; i++){
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (rowSet.has(i) || colSet.has(j)) matrix[i][j] = 0
+    }
+  }
+};
+
+  var spiralOrder = function(matrix){
+    const res = []
+    while(matrix.length){
+      const first = matrix.shift()
+      res.push(...first)
+      for(const m of matrix){
+        let val = m.pop()
+        if(val)
+        res.push(val)
+        m.reverse()
+      }
+      matrix.reverse()
+    }
+    return res
+  };
+
+  var rotate = function(matrix){
+    const n = matrix.length;
+
+    function transpose(){
+      for(let i =0; i < n; i++){
+        for(let j = i + 1; j < n; j++){
+          const temp = matrix[j][i]
+          matrix[j][i] = matrix[i][j];
+          matrix[i][j] = temp;
+        }
+      }
+    }
+
+    function rotate() {
+      for(let i =0; i < n; i++){
+        for(let j = 0; j < n/2; j++){
+          const temp = matrix[i][j];
+          matrix[i][j] = matrix[i][n - 1 -j];
+          matrix[i][n - 1 -j] = temp;
+        }
+      }
+    }
+    transpose(matrix);
+    rotate(matrix);
+  }
+
+  var isValidSudoku = function(board){
+    for (let i = 0; i < 9; i++) {
+      let row = new Set(),
+          col = new Set(),
+          box = new Set();
+
+          for (let j = 0; j < 9; j++){
+            let _row = board[i][j];
+            let _col = board[j][i];
+            let _box = board[3*Math.floor(i/3)+Math.floor(j/3)][3*(i%3)+(j%3)]
+
+            if (_row != '.'){
+              if (row.has(_row)) return false;
+              row.add(_row);
+            }
+            if(_col != '.'){
+              if(col.has(_col)) return false;
+              col.add(_col)
+            }
+
+            if(_box != '.'){
+              if(box.has(_box)) return false;
+              box.add(_box);
+            }
+          }
+    }
+    return true
+  };
+
+
+What are the differences between const, let and var?
+if(false) {
+  var firstNameVar= 'Fatima';
+}
+console.log(firstNameVar);
+-->
