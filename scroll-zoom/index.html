@@ -137,4 +137,143 @@ console.log(allUsers);
 const user = {firstName: 'Dylan', lastName: 'Israel' };
 const fullUser = {channel: 'codingtutorials360', ...user}
 console.log(fullUser)
+
+{Linked List}
+Like arrays, a linked list is used to represent sequential data. It is linear collection of data elements whose order is not given by their physical placement in memory, as opposed to arrays,
+as opposed to arrays, where data is stored in sequential blocks of memory. Instead each element contains an address of the
+next element. It is data structure consisting of a collection of nodes which together represent a sequence.
+
+In its most basic form, each node contains: data & reference (in other words, a link) to the next node in the sequence.
+Insertion and deletion of a node in the list (given its location) is O(1) whereas in arrays the following elemnts will have to be shifted.
+
+Access time is linear because directly accessing elements by its position in the list is not
+possible (in arrays you can do arr[4]for example). You have to traverse from the start.
+One characteristics of linked lists is that they are linear data structures, whic means that there is a sequence and an order to how they are constructed and traversed. We
+can think of a linear data structure like a (game of hopscotch): in order to get to the end of the list, we have to go
+through all of the items in the list in order or sequentially. Linear structures, however, are the opposite of non-linear structures. In non-linear data structures, items don't have to be arranges in order, which means that we could traverse the data structure non-sequentially.
+
+Hashes,
+Trees & Graphs are non-linear data Structure.
+
+The biggest differentiator between arrays and linked lists is the way that they use memory in our machines.
+Those of us who work with dynamically typed languages like Ruby, JavaScript, or Python don't have to think about how 
+much memory an array uses when we write our code on a day to day basis because there are several layers of abstraction
+that end up with us not having to worry about memory allocation at all.
+
+When a linked list is born, it doesn't need 7 bytes of memory all in one place. One byte could live somewhere,
+while the next byte could be stored in another place in memory altogether!Linked lists don't need to take up a single block of memory, instead the memory that they use can be scattered throughout.
+
+The difference between arrays & linkd lists is that (arrays) are {static data structure} while linked lists are 
+{dynamic data structure}. 
+
+A ststic data structure needs all of its resources to be allocated when the structure is created, this means that even if the structure was to grow or shrink in size and elements were to be added or removed, it still always needs a given size and amount of memory.
+A dynamic data structure can grow & shrink in memory. It doesn't need a set of memory to be allocated in order to exist, and its size and shape can change, and the amount of memory it needs can change as well.
+
+A linked list is made up of a series of nodes, which are the elements of the list. The starting point of the list is a
+reference to the first node, which is reffered to as the (head). Nearlly all linked lists must have a head, because this is effectively the only entry point to the list and all of its elements , and without it, you wouldn't know where to start!The end of the list isn't a node,
+but rather a node that points to null, or an empty value.
+
+"A node only knows about what data it contains, and who its neighbor is."
+
+A single node doesn't know how long the linked list is, 
+
+
+var reverseList = (head, reversed = null) => {
+  while (head) [head.next, reversed, head] = [reversed, head, head.next];
+  return reversed;
+}
+
+const hasCycle = (head) => {
+  let fast = head;
+  while (fast && fast.next){
+    head = head.next;
+    fast = fast.next.next;
+    if(head === fast) return true;
+  }
+  return false;
+}
+
+var mergeTwoLists = function (l1, l2) {
+  if (!l1) return l2;
+  else if (!l2) return l1;
+  else if (l1.val <= l2.val) {
+      l1.next = mergeTwoLists(l1.next, l2);
+      return l1;
+  } else {
+      l2.next = mergeTwoLists(l1, l2.next);
+      return l2
+  }
+};
+
+
+var mergeKLists = function (lists) {
+    // Return early if no ListNodes were supplied
+    if (!lists.length) return null;
+
+    // Loop through the supplied ListNodes
+    for (let i = 1; i < lists.length; i++) {
+        // Merge each ListNode with the first
+        lists[0] = merge(lists[0], lists[i]);
+    }
+
+    // Return the merged ListNode
+    return lists[0];
+};
+
+var merge = function (l1, l2) {
+    // If either list is empty, return the other list's node
+    if (l1 == null) return l2;
+    if (l2 == null) return l1;
+
+    // If l1 is lower
+    if (l1.val < l2.val) {
+        l1.next = merge(l1.next, l2);
+        return l1;
+    }
+    // If l2 is lower
+    else {
+        l2.next = merge(l1, l2.next);
+        return l2;
+    }
+};
+
+var removeNthFromEnd = function(head, n){
+  let fast = head, slow = head
+  for(let i =0; i < n; i++) fast = fast.next
+  if(!fast) return head.next
+  while (fast.next) fast = fast.next, slow = slow.next
+  slow.next = slow.next.next
+  return head
+};
+
+var reorderList =  function(head) {
+  let slow = head
+  let fast = head
+  while (fast.next && fast.next.next){
+    slow = slow.next
+    fast = fast.next.next
+  }
+
+  let prev = null
+  let cur = slow.next
+  while(cur){
+    let temp = cur.next
+    cur.next = prev
+    prev = cur
+    cur = temp
+  }
+  slow.next = null
+
+  let h1 = head
+  let h2 = prev
+
+  while(h2){
+    let temp = h1.next
+    h1.next = h2
+    h1 = h2
+    h2 = temp
+  }
+};
+
+
 -->
