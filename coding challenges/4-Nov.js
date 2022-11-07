@@ -87,3 +87,104 @@ function Person(initialAge) {
     this.age++;
   }
 }
+
+for (i = 0; i < 5; i++) {
+	if(i + 1 === 2)
+		continue
+
+	print(i+1)
+	
+	if(i === 3)
+		break
+}
+
+// ToRainLanguage()
+const toRainLanguage = (number) => {
+  let result = ''
+  if (number % 3 === 0) result += "Pling"
+  if (number % 5 === 0) result += "Plang"
+  if (number % 7 === 0) result += "Plong"
+  
+  return result || number
+}
+
+// isIsogram()
+// Implement isogram check function. Isogram is a string in which all letters of the string are present only once.
+// For example: console.log(isIsogram('ambidExtRously')) // true
+
+const isIsogram = (string) => {
+  const lowerCased = string.toLowerCase()
+  const result = lowerCased.split('').every((v, i)=>console.log(v, i) || lowerCased.indexOf(v)===i)
+
+  return lowerCased
+}
+
+console.log(isIsogram('ambidExtrously')) // true
+console.log('patteRN') //false
+
+console.log(toRainLanguage(3))
+console.log(toRainLanguage(21))
+console.log(toRainLanguage(35))
+console.log(toRainLanguage(1))
+
+// isLeapYear()
+// leap year occurs every four years (those divisible by four) except for centaury years, but not when the year is divisible by 400.
+// console.log(isLeapYear("2020")); //true
+
+const isLeapYear = (year) => {
+  const numberYear = Number(year)
+  return numberYear%100 === 0 ? numberYear % 400 === 0 : numberYear % 4 === 0
+}
+
+console.log(isLeapYear("2020"));
+console.log(isLeapYear("2018"));
+console.log(isLeapYear("1700"));
+console.log(isLeapYear("1600"));
+
+// encoding & decoding function
+// Implement encode and decode functions that follow run length encoding pattern. Run-length encoding is a form of data compression,
+// where consecutive data elements are replaced by just one data value and count of that value.
+// For example, console.log(encode('wwwiiuuuu'))
+// console.log(decode('2u3a4o))
+
+const encode = (string) => {
+  return string.replace(/(\w)\1+/g, (m, v) => `${m.length}${v}`)
+}
+
+const decode = (string) => {
+  return string.replace(/(\d+)(\w)/g, (x, y, z))
+}
+
+console.log('wwwiiuuuu') // 3w214u
+console.log('2u3a4o')
+
+// {Remove Duplicates from array with reduce()}
+// Implement remove duplicates from array function using array.reduce - removeDuplicateValues()
+// console.log(removeDuplicateValues(['one', 'two', 'one', 'three', 'three', 'two']));
+const removeDuplicateValues = (array) => {
+  return array.reduce((accumulator, value) => { 
+    return accumulator.includes(value) ? accumulator : [...accumulator, value]
+  }, [])
+}
+
+console.log(removeDuplicateValues(["one", "two", "one", "three", "three", "two"]));
+
+// {Implement array map with reduce}
+const map = (array, callback) => {
+  return array.reduce((accumulator, value) => {
+    return [...accumulator, callback(value)]
+  }, [])
+}
+
+console.log(map([1, 2, 3], (v) => v + 1));
+
+// {Flatten Array with reduce()}
+// Implement flatten nested array using recursive reduce - makeFlat()
+// Console.log(makeFlat(['one'], ['two', 'three'], ['four', ['five']]])) 
+const makeFlat = (array) => {
+  return array.reduce((accumulator, value) => {
+    return Array.isArray(value) ? [...accumulator, ...makeFlat(value)] : [...accumulator, value]
+  }, [])
+}
+
+console.log(map([1, 2, 3], (v) => v + 1));
