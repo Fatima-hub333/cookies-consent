@@ -22,3 +22,19 @@ function bubbleSort(arr) {
 
 bubbleSort(a)
 printResult(a, numSwaps)
+
+// Second Challenge
+function main() {
+  function printArray<T>(items: T[]) {
+    let length = 0;
+    for (var item of items) {
+      if (length == 0) {
+        length = Number(item);
+      } else {
+        length -= 1;
+        console.log(item);
+      }
+    }
+  }
+  printArray(inputLines);
+}
