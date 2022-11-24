@@ -23,3 +23,49 @@ function processData(input) {
   }
   console.log(fine);
 }
+
+// {Unit Testing} (TypeScript)
+// class TestDataEmptyArray{
+//   get_array() {
+//     let emptyArr: number[] = [];
+//     return emptyArr;
+//   }
+// }
+// class TestDataUniqueValues {
+//   get_array() {
+//     let arr: number[] = [0, 1];
+//     return arr;
+//   }
+//   get_expected_result() {
+//     return 0;
+//   }
+// }
+
+// class TestDataExactlyTwoDifferentMinimums {
+//   get_array() {
+//     let arr: Number[] = [0, 0, 1];
+//     return arr;
+//   }
+//   get_expected_result() {
+//     return 0;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
