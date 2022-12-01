@@ -66,9 +66,99 @@ It's very important to have an engaging and relevant ad copy that includes high-
 
 The Web page must be relevant to the user, load quickly, and provide an overall smooth user experience.
 
+*Targetting*
+Choosing the right keywords is what allows advertisers to show ads to relevant audiences. There are different targeting options avilable, including;
+- Device Targeting
+- Location Targeting
+- Day & Time Targeting
+- Demographic Targeting
+
+Bids can be automatically adjusted for keywords based on targeting options, giving advertisers more control over traffic and send by bidding when customers are more valuable to the business
+
+*Conversions*
+The real end game is to obtained conversions. These are the actions that advertisers want users to complete after clicking on their ad and depend on the type of business being advertised.
+Common examples of conversions are:
+- Purchasing a service
+- Signing Up for a newsletter
+- Placing a phone call
+
+Platforms like Google Ads can track conversions using a snippet of code placed into the source code of the conversion page to collect conversion data.
+
+*Chapter 2*
+**7 Powerful benefits of Using PPC Advertising**
+For starters, PPC:
+- Offers quick entry
+- Results are easy to measure & track
+- Works well with other marketing channels,
+- Provides a wealth of useful data
+
+1) PPC Contributes to Business Goals:- PPC can help you achieve a vast number of business and marketing goals. Nearly any type of conversion goal can be tracked. PPC is a powerful tool for aligning website traffic drivers to end-goals.
+
+PPC can support many parts of the sales funnel and the path that your prospects take from awareness to becoming a customer. Regardless of the set of identified goals, PPC campaigns can be set Up effectively.
+
+2) PPC is Measurable & Trackable:- A major benefits of PPC is that it's easy to measure and track. Simply use the Google Ads tool in combination with Google Analytics. You'll see high-level performance details, including impressions, clicks & conversions.
+
+Stats are readily available and show how your campaigns are performing and what kind of traffic and results they drive for your budget. When you send your PPC traffic to dedicated landing pages and track it to conversion using Google Analytics, you can see what you spent and what it drove in terms of your end goals.
+
+3) Quick Entry:- Even if you're a decade behind your competitors in jumping into PPC marketing, you can get up and running quickly with a little bit of optimization. When compared to other channels like email and organic social, you have the advantage of targeting people outside of those who are already aware of your brand. You aren't limited to your existing folllowers/customer lists.
+
+PPC lets you quickly cast a wide net to find new prospects and customers.
+
+4) You're in Control :- You have control over a wide range of options for reaching ppotential customers. This starts with the keywords or placements you choose to target and how restrictive you want to be.
+
+You also have alot of budget flexibility, if you want to start small. You can set your own ad budget and bids, and choose what you're willing to spend.
+
+The alignment of relevance between your landing pages and the keywords and ad copy can hurt or help you.
+
+5) PPC Works well with other Marketing Channels:- Content marketing has taken over the digital marketing world and content plans and calendars are the norm in most businesses now. 
+
+PPC and SEO work well together as the impressions and
+opportunities for traffic are often to the same audience – the people
+using Google to find information, services, or products.
+
+The performance data of impressions, clicks, and conversions from
+Google Ads can provide great insight and direction on a keywordby-
+keyword basis for prioritizing SEO efforts.
+
+6) Incredible Target Options:- This ranges from targeting keywords through text ads, to running ads through remarketing based on their past behaviors or focusing on specific audience demographics on the display network.
+
+7) A wealth of Marketing Data :- 
+While there’s a lot of data and performance information directly
+available in Google Ads, the value of information gained goes
+beyond just PPC performance.
+Impression, click, and conversion data for each keyword can be
+used to advise SEO strategy and content marketing efforts.
+Beyond that, you can use the built-in keyword planner and display
+planner tools to find where your audience is.
+You can also cross-reference where your competition is through
+third-party tools like SpyFu, KeywordSpy, and iSpionage to build a
+solid profile of what you’re up against and what market share you
+can gain. Plus, you can still manually look at the search results and
+gain insight as to what the searcher will see.
 
 
-* Terms & Acronyms *
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Terms & Acronyms*
 - RTB (Real-Time-Bidding)
 - SERP (Search Engine Results Page)
 - CPC (Cost-per-click)
+- ROI - (Return on Investment)
