@@ -26,3 +26,72 @@ The process of translating text input into audio data is called "synthesis" and 
 The speech synthesis process generates raw audio data as a base64-encoded string. You must decode the base64-encoded string into an audio file before an application can lay it.
 
 Text-to-Speech supports configuring the speaking rate, pitch, volume, and sample rate hertz.
+
+Reserve Characters:- Avoid using SSML reserve characters in the text that is to be converted to audio. When you need to use an SSML reserve character, prevent the charracter from being read as code by using its escape code. 
+"
+&
+'
+<
+>
+
+<break /> (3s, 250mx, x-weak, weak, medium, strong, x-strong)
+<speak>
+Step 1, take a deep breath. <break time="200ms" />
+Step 2, exhale.
+Step 3, take a deep breath again. <break strength="weak" />
+Step 4, exhale.
+</speak>
+
+<say-as></say-as> (This element let you indicate information about the type of the text construct that is contained witin the element. It also hel specifiy the level of detail for rendering the contained text. This element has the required attribute 'interpret-as' which determines how the value is spoken. Otional attributes 'format' and 'detail' is used.
+
+- Interpret-as;- attribute suports the following values:
+a) currency
+<speak>
+  <say-as interpret-as='currency' language='en-US'> $42.01 </say-as>
+</speak>
+
+b) telephone
+<speak>
+  <say-as interpret-as='telephone' google:style='zero-as-zero'>1800-202-1212</say-as>
+</speak>
+
+c) Verbatim or spell-out
+<speak>
+  <say-as interpret-as='verbatim'>abcdefg</say-as>
+</speak>
+
+d) date
+<speak>
+  <say-as interpret-as="date" format="yyyymmdd" detail="1">
+    1960-09-10
+  </say-as>
+</speak>
+
+<speak>
+  <say-as interpret-as="date" format="dm">10-9</say-as>
+</speak>
+
+<speak>
+  <say-as interpret-as="date" format="dmy" detail="2">
+    10-9-1960
+  </say-as>
+</speak>
+
+e) characters
+<speak>
+  <say-as interpret-as="characters">can</say-as>
+</speak>
+
+f) cardinal
+<speak>
+  <say-as interpret-as='cardinal'> 12345 </say-as>
+</speak>
+
+g) Ordinal
+<speak>
+  <say-as interpret-as='ordinal'> 1 </say-as>
+</speak>
+
+h) expletive/bleep
+i) unit
+j) time
