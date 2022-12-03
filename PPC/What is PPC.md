@@ -136,6 +136,106 @@ solid profile of what you’re up against and what market share you
 can gain. Plus, you can still manually look at the search results and
 gain insight as to what the searcher will see.
 
+*The 8 Best PPC Ad Networks*
+No two ad platforms are exactly alike. deciding where to invest in advertising can depend on several factors, such as:
+- Platform user base
+- Volume for ad serving
+- Creative Opportunities
+- Advertiser budget
+
+This allows advertisers to gain massive reach to potential customers across audiences and online behaviors.
+a) Google Ads
+b) Microsoft Ads
+c) Youtube
+d) Facebook
+e) Instagaram
+f) Linkedin
+g) Twitter
+h) Pinterest
+
+A) Google Ads:- Google Ad is the most popular ad network due to the available reach of ads in volume of searches done in the GDN (Google Display Network). Google states, "Google Ads display ads appear on over two million websites and in over 650,000 apps, so your ad can show up whereever your audience is. Targetting on the dispaly network includes remarketing, in-market audiences, similar audiences and more.
+Both search and display campaigns allow demographic targetting in age, gender, parental status, and household income. Adding in demographic targeting narrows the available reach for ads, but makes the targeting more relevant.
+
+**Placements**
+Google search engine results
+Web placements on the GDN
+Shopping
+Mobile apps
+Youtube
+
+**Ad Formats**
+Text, Image, Responsive, video
+
+**Pricing**
+Cost-per-click (CPC) model based on the competition and ad quality. GDN allows Cost-per-1000 impressions (CPM).
+
+B) MICROSOFT ADS
+The Microsoft search network sees 12.2 billion PC searches monthly. Microsoft ads has tools for advertisers to import campaigns from Google Ads, simplifying the process of getting started. According to Microsoft:
+`"Outside of Linkedin itself, Microsoft Advertising is the only digital advertising platform to offer Linkedin Profile Targeting"`
+
+**Placements**
+- Search Engines
+- Microsoft Audience Network (MSN) -> Outlook.com, the Edge browser and select quality partner sites. Linkedin.
+
+**Ad Formats**
+- Text for Search
+- Responsive for Native Placements
+- Linkedin serves text ads
+- Dynamic Search Ads
+- Shopping Campaigns
+
+**Pricing**
+CPC model based on the competition and ad quality.
+
+C) Youtube
+Youtube reaches over 2 billion logged-in users per month globally, so it's an excellent opportunity for advertisers to reach their audience through this platform effectively. 
+* Campaign creating and management are handled through the Google Ads platform with more in-depth information about the audience's demographics and engagement through youtube analytics in the Youtube account.
+
+**Placements**
+Youtube
+
+**Ad Formats**
+- Skippable in-stream ads,
+- Non-skippable in-stream ads,
+- Bumper Ads
+- Video Discovery Ads
+- Masthead Ads
+  
+**Pricing**
+- CPV (Cost-per-view)
+- CPM (Cost per impression)
+
+D) FACEBOOK
+As the top social network on the planet, 2.6 billion people use Facebook every month.
+User targeting can be very granular with demographics, interests, behaviors and more. Facebook supports retargeting through user activity on Facebook and off Facebook actions through advertisers. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
