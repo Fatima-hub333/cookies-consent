@@ -65,3 +65,11 @@ Using Goals to imrove business erformance
 - D) How relevant is it to the wider business objectives?
 - E) When is it due to be delivered or carried out?
 
+Crawling, indexing, ranking
+
+Crawling -> Search Engines crawl the internet to discover content, like web pages, images & videos. Each search engine uses computer programs called "bots (short for robot)"  Crawlers or spiders to make their way through the pages. The bots hop from page to page by following links to other ppages. Thesebots never stop. Their sole purose is to visit and revisit pages looking for new links & new content to include in the index.
+
+Indexing -> Indexing is the second part of the process. The index is a gigantic list of all the webpages and content found by the bots. The search engine uses the index as the source of information displayed on the search results pages.
+But not everything the bots find makes it into a search engine's index. For example, search engines may find multiple copies of the exact same piece of content located on different web pages. How is that possible? 
+
+Ranking -> When you type in the search enginer, the engine compares the words and phrases you use to its index looking for matching results.
