@@ -73,3 +73,69 @@ Indexing -> Indexing is the second part of the process. The index is a gigantic 
 But not everything the bots find makes it into a search engine's index. For example, search engines may find multiple copies of the exact same piece of content located on different web pages. How is that possible? 
 
 Ranking -> When you type in the search enginer, the engine compares the words and phrases you use to its index looking for matching results.
+- words on the page
+- number of other websites linking to it
+- freshness of the content
+
+"Saerh engines are constantly working to scour the web for content, organise it & then display the most relevant results to searchers."
+
+
+{How Search Engines understand what's on a webpage? Which parts of a webpage specifically help them? And How you can make your pages more visible to searh engines}
+*Think Who you want to visit your page and what words they're using to describe your products and services. 
+
+Web Search Engines Look for;
+- Content
+- Coding
+- Descriptive Words
+- Alternatice Text
+- Optimised Visibility
+
+
+[
+  What Organic & Unpaid results are?
+  What Search Enginer Optimization means?
+  Discover How Good Website content affects te organic search results?
+
+- The Search engine primary goal is to help people find what they're looking for? If you can help the search engine decide that your website is what people are searching for, you're in good shape.
+  'Making Improvements to your website to help it appear in the organic results is called "search engine optimization"
+- Good SEO involves helping a search engine find and understand your site.
+What do Search Enginer like? -> Good, Relevant content.
+]
+
+{
+  How Advertising on Search Engines work?
+  {
+    "SEM" -> Search Engine Marketing. We will explain why it's so effective and how business compete to show ads.
+- It's very crucial initially when you start off to optimise your search engine process because the keywords that you're choosing both via organic search as well as the paid search typically define your site and your business to the customer at large, to the world at large.
+- What happens typically is that when we choose certain words as paid keywords, we understand whether or not they work as organic search keywords, so there is a lot of learning that we're doing from paid keywords.
+
+Paid Search Components:
+
+*Organic Formula
+*Advertising Models
+*Bidding Auctions
+*Keywords
+*Customer Reach
+  }
+}
+
+[
+  Want a great tool to get your website more traffic?
+- Search Console: (how it can help you? & How you can get it set up?)
+Google Search Console, is a service that gives you feedback about how your website is doing in google search results. It has two primary functions;
+a) It monitors your performance in Google search results
+b) It also shows you how Google sees your site?
+
+A few ways Search Console might be able to help you out. One way is throught its search analytics reports. This can help you answer a few important questions like which searches bring people to your site or tell you when searchers click on your links. They can even let you know which other sites link to yours.
+crawl reports & google index report
+]
+
+
+
+
+
+
+
+
+
+
