@@ -119,6 +119,12 @@ Fine-Tunin Keyword:
 ]
 
 [
+  Monitor Effectiveness through:
+  - Tracking
+  - Conversions
+  - Online tools
+  - Codes
+  - Reports
   Hi there! So you’ve got some online advertising campaigns up and running and you want to find out how they’re doing?
 
 In this video, we’ll explain how to do just that by tracking conversions. We’ll cover what they are, how to choose the ones you want to measure and what technology to use to track them.
