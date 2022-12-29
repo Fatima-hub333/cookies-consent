@@ -144,6 +144,34 @@ Let’s go back to the nature photography business. You want to track a complete
 Instead, you would install the conversion tracking code on the order confirmation page. That’s the page customers see after they complete an order. That way, you know a conversion happened. Next, you decide to track online inquiries. Just like the previous example, you need to install the conversion tracking code on a page the visitor sees only after they submit an inquiry. For example, on the page that thanks the customer after they’ve placed an order. Make sense? In order to properly track conversions, you need to attach the code to pages someone will only see after they’ve taken the action you want. Once you install the code, you’ll start getting reports that tell you how many conversions you got. That’s valuable information in figuring out if your online ad campaigns are working. To sum up: By using online tools from search engines like Bing or Google, you can measure online conversions and set yourself up for success.
 ]
 
+{Get Noticed Locally}
+[
+  Local Search.
+  How can you build your online local presence in market?
+  - Add address & interactive map
+  - Contact Number
+  - Working Hours
+  - Areas of service
+  - How can they be in touh with you
+Essentials for Marketing Locally:
+- Local Search lists
+- Promote your presence
+- Geographical Content
+- Mobile Mapping
+- Localised SEO
+
+Local directories are great way for local businesses to get potential customers in their area.
+
+Name, Address & Business Contact.
+
+Benefits of Local Directories:
+- Local profile
+- Regional Listings
+- Bsuiness Directories
+- Review Sites
+- Social Media
+]
+
 
 
 
