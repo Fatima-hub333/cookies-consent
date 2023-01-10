@@ -1,0 +1,2 @@
+knowing what your campaign is trying to achieve and how you will measure it willallow you to setup Google Analytics & Google Ads ahead of time, ensuring you are measuring performance property from day one and securing the integrity of your campaign results.
+1) Clicks
