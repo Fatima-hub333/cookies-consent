@@ -1,36 +1,66 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import Content from './components/Content'
-import './style.css'
+// import App from './App';
+// import Content from './components/Content'
+import styled from 'styled-components'
+
+const Title = styled.h1`
+  color: #b19cd9;
+`
+
+const Section = styled.div`
+  background-color: #ffffff;
+  border: solid 3px grey;
+  margin: 4px;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: left;
+  font-size: 40px;
+  color: #ff6961;
+`
+
+const WeekdayTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  border-right: solid 3px lightgrey;
+`
 
 class Main extends React.Component {
   render() {
     return (
       <>
-        <h1>Progress Tracker</h1>
+        <Title>Progress Tracker</Title>
         <div>
-          <div className='section'>
-            <div className='weekday-title'>M</div>
-          </div>
-          <div className='section'>
-            <div className='weekday-title'>T</div>
-          </div>
-          <div className='section'>
-            <div className='weekday-title'>W</div>
-          </div>
-          <div className='section'>
-            <div className='weekday-title'>T</div>
-          </div>
-          <div className='section'>
-            <div className='weekday-title'>F</div>
-          </div>
-          <div className='section'>
-            <div className='weekday-title'>S</div>
-          </div>
-          <div className='section'>
-            <div className='weekday-title'>S</div>
-          </div>
+          <Section>
+            <WeekdayTitle className='weekday-title'>M</WeekdayTitle>
+          </Section>
+
+          <Section>
+            <WeekdayTitle className='weekday-title'>T</WeekdayTitle>
+          </Section>
+
+          <Section>
+            <WeekdayTitle className='weekday-title'>W</WeekdayTitle>
+          </Section>
+
+          <Section>
+            <WeekdayTitle className='weekday-title'>T</WeekdayTitle>
+          </Section>
+
+          <Section>
+            <WeekdayTitle className='weekday-title'>F</WeekdayTitle>
+          </Section>
+
+          <Section>
+            <WeekdayTitle className='weekday-title'>S</WeekdayTitle>
+          </Section>
+
+          <Section>
+            <WeekdayTitle className='weekday-title'>S</WeekdayTitle>
+          </Section>
         </div>
       </>
     );
