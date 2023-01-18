@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import Content from './components/Content'
 import './style.css'
 
 class Main extends React.Component {
@@ -8,7 +9,7 @@ class Main extends React.Component {
     return (
       <>
         <h1>Hello World!</h1>
-        <App />
+        <Content />
       </>
     );
   }
