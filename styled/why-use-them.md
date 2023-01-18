@@ -10,4 +10,4 @@
 
 - Automatic Vendor Prefixing: Write CSS the way you know and love, and let the package do its magic.
 
-'nppm install --save styled-components'
+'npm install --save styled-components'
