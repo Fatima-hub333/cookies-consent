@@ -5,11 +5,3 @@ body {
   color: #d1aaf0;
   font-family: sans-serif;
 }
-
-.section {
-  background-color: #f0d1aa;
-  display: flex;
-  justify-content: center;
-  color: #f0aeaa;
-  border-radius: 15px;
-}
