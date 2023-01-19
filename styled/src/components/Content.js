@@ -1,31 +1,29 @@
-/* eslint-disable no-unused-vars */
 import React from 'react'
-import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import Button from './Button'
-
+import Icon from './Icon'
 
 const Title = styled.h1`
-  color: #aac9f0;
+    color: #aaecf0;
 `
-
 const Section = styled.div`
-  background-color: #aac9f0;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  color: #f0aeaa;
-  border-radius: 15px;
+    background-color: #aac9f0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
 `
-
 const Content = () => {
-  return (
-    <Section className='section'>
-      <Title>💅 Section</Title>
-      <Button text='me first'/>
-      <Button text='me second'/>
-    </Section>
-  )
+    return (
+        <Section>
+            <Title>💅🏻 Section</Title>
+            <Button primary text="me first"/>
+            <Button text="me second"/>
+            <Icon primary/>
+            <Icon/>
+        </Section>
+    )
 }
 
 export default Content
+
