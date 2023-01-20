@@ -1,10 +1,31 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import Button from './Button'
 import Icon from './Icon'
 
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`
+
+const rotate = keyframes`
+  from {
+    transform : rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`
+
 const Title = styled.h1`
-    color: #aaecf0;
+  color: #aaecf0;
+  animation: 2s ${rotate} linear infinite;
 `
 
 const SubTitle = styled(Title)`
