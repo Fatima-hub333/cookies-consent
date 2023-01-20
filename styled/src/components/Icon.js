@@ -3,11 +3,15 @@ import styled from 'styled-components'
 
 const StyledIcon = styled.div`
   background-color: ${({ statusColor }) => {
-  if (statusColor === 'ready') return 'yellow';
+  if (statusColor === 'ready') return 'green';
   else if (statusColor === 'steady') return 'orange';
-  else if (statusColor === 'go') return 'green';
-  else return 'red';
-}}
+  else if (statusColor === 'go') return 'red';
+  else return 'yellow';
+}};
+
+&:hover{
+  background-color: grey;
+}
   
   width: 30px;
   height: 30px;

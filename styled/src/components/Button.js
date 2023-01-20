@@ -8,12 +8,22 @@ const StyledButton = styled.button`
     padding: 5px;
     margin: 5px;
     border-radius: 15px;
-`
-const ReversedButton = props => <StyledButton {...props} children={props.children.split('').reverse()} />
+    flex-direction: column;
 
+    &:hover {
+        background-color: grey;
+    }
+
+    .subtext {
+      font-size: 10px;
+    }
+`
 const Button = ({text, primary}) => {
     return (
-        <StyledButton as={ReversedButton} primary={primary}>{text}</StyledButton>
+        <StyledButton primary={primary}>
+          {text}
+          <p className='subtext'>Sub Text</p>
+        </StyledButton>
     )
 }
 
