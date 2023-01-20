@@ -9,11 +9,11 @@ const StyledButton = styled.button`
     margin: 5px;
     border-radius: 15px;
 `
-
+const ReversedButton = props => <StyledButton {...props} children={props.children.split('').reverse()} />
 
 const Button = ({text, primary}) => {
     return (
-        <StyledButton primary={primary}>{text}</StyledButton>
+        <StyledButton as={ReversedButton} primary={primary}>{text}</StyledButton>
     )
 }
 
