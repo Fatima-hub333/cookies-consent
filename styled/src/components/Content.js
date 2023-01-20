@@ -20,7 +20,7 @@ const Content = () => {
             <Button primary text="me first"/>
             <Button text="me second"/>
             <Icon primary/>
-            <Icon/>
+            <Icon />
         </Section>
     )
 }

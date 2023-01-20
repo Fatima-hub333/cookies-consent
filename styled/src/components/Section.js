@@ -21,11 +21,19 @@ const WeekdayTitle = styled.div`
   border-right: solid 3px lightgrey;
 `
 
-const Section = ({text}) => {
+const WeekendTitle = styled(WeekdayTitle)`
+  background-color: lightgrey;
+  border-radius: 7px 0 0 7px;
+`
+
+const Section = ({ text }) => {
+  const isWeekend = text === 'S'
+
   return (
     <>
       <StyledSection>
-        <WeekdayTitle>{ text}</WeekdayTitle>
+        {!isWeekend && <WeekdayTitle>{text}</WeekdayTitle>}
+        {isWeekend && <WeekendTitle>{ text}</WeekendTitle>}
       </StyledSection>
     </>
   )
