@@ -31,7 +31,15 @@ const ProgressSection = styled.div`
 `
 
 const ProgressBar = styled.div`
-  background-color: red;
+  background-color: ${({ progress }) => {
+  let numeric = progress.slice(0, -1)
+  let integer = parseInt(numeric)
+  if (integer >= 80) return 'red';
+  if (integer >= 60) return 'orange';
+  else if (integer >= 40) return 'yellow';
+  else return 'green';
+}};
+  
   height: 50px;
   width: ${({progress}) => progress || '0%'};
 `
