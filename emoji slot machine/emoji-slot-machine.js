@@ -48,3 +48,18 @@ fetch(food)
         })
     })
     .catch(err => console.log(err))
+
+
+// function isAnagram(str1, str2) {
+//   if(typeof str1 !== "string" || typeof str2 !== "string") return false
+//   const newStr1 = str1.toString().toLowerCase().split('').join('').trim();
+//   const newStr2 = str2.toString().split('').sort().join('').trim();
+
+//   return newStr1 === newStr2;
+// }
+
+// console.log(isAnagram("chin", "inch"));
+// console.log(isAnagram("  night   ", "thing"));
+// console.log(isAnagram(34, "thing"));
+// console.log(isAnagram('Night', "THING"));
+// console.log(isAnagram("", ""))
